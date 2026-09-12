@@ -18,7 +18,13 @@ export const metadata: Metadata = {
   description:
     "Héritage Conservateur — un mouvement politique étudiant engagé pour la responsabilité, le respect, la tradition et l'avenir.",
   icons: {
-    icon: "/1000011275.ico",
+    icon: [
+      {
+        url: "/1000011275.ico",
+        type: "image/x-icon",
+      },
+    ],
+    shortcut: "/1000011275.ico",
   },
 };
 
@@ -32,6 +38,14 @@ export default function RootLayout({
       lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="icon"
+          href="/1000011275.ico"
+          type="image/x-icon"
+        />
+      </head>
+
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
