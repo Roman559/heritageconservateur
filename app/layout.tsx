@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Héritage Conservateur | Parti politique étudiant",
   description:
-    "Héritage Conservateur — un mouvement politique étudiant.",
+    "Héritage Conservateur — un mouvement politique étudiant engagé pour la responsabilité, le respect, la tradition et l'avenir.",
   icons: {
     icon: "/1000011275.ico",
   },
@@ -33,6 +34,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <Analytics />
       </body>
     </html>
   );
